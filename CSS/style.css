@@ -35,7 +35,7 @@ button:hover,
 }
 
 article {
-  width: 1290px;
+  max-width: 1290px;
   margin: 0 auto;
 }
 
@@ -66,7 +66,7 @@ header {
 }
 
 .hero {
-  background-image: url(../IMG/hero-back.jpg);
+  background-image: url(../img/hero-back.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 80px 0;
@@ -215,6 +215,8 @@ h2 span {
 .points-items-text-money-icon,
 .points-items-text-date-icon {
   margin-right: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 .points-items-text-date-text,
@@ -385,6 +387,7 @@ h2 span {
 .calc-results {
   display: flex;
   width: 47%;
+  justify-content: space-between;
 }
 
 .calc-results h3 {
@@ -420,7 +423,7 @@ h2 span {
   -webkit-appearance: none;
 }
 
-/* Специальные правила для браузеров на движках WebKit/Blink */
+
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 2px solid #FFCD28;
@@ -431,7 +434,7 @@ input[type=range]::-webkit-slider-thumb {
   cursor: pointer;
 }
 
-/* Тоже самое для Firefox */
+
 input[type=range]::-moz-range-thumb {
   border: 2px solid #FFCD28;
   height: 24px;
@@ -441,7 +444,7 @@ input[type=range]::-moz-range-thumb {
   cursor: pointer;
 }
 
-/* Тоже самое для IE */
+
 input[type=range]::-ms-thumb {
   border: 2px solid #FFCD28;
   height: 24px;
@@ -611,7 +614,7 @@ input[type=checkbox] {
 }
 
 .form-sub {
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
 .form-name div,
@@ -639,6 +642,54 @@ input[type=checkbox] {
 .form-content-forms input::-moz-placeholder          {font-size: 18px;}
 .form-content-forms input:-moz-placeholder           {font-size: 18px;}
 .form-content-forms input:-ms-input-placeholder      {font-size: 18px;}
+
+.form-check {
+  position: relative;
+  margin-top: 50px;
+}
+
+.check-label {
+  padding-left: 30px;
+  position: relative;
+  display: block;
+}
+
+.check-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #303030;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-checkbox:checked + .check-label::before {
+  border: none;
+  background-color: #FFCD28;
+}
+
+.form-checkbox:checked + .check-label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 10px;
+  height: 5px;
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  transform: rotate(315deg);
+}
+
+.form-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
 
 .persona-content {
   padding: 95px 0;
@@ -728,4 +779,375 @@ input[type=checkbox] {
 
 .presents-content p {
   margin-bottom: 45px;
+}
+
+@media (max-width:1290px) {
+  article {
+    max-width: 970px;
+  }
+
+  .features-items-1,
+  .features-items-2,
+  .features-items-3 {
+    width: 32%;
+    display: flex;
+  }
+
+  .features-items-1,
+  .features-items-2 {
+    margin-right: 3%;
+  }
+
+  .features-items-1-icon,
+  .features-items-2-icon,
+  .features-items-3-icon {
+    margin-right: 20px;
+  }
+
+  .features-items-1-text div:first-child,
+  .features-items-2-text div:first-child,
+  .features-items-3-text div:first-child {
+    font-size: 34px;
+    font-weight: bold;
+    margin: 5px 0 20px;
+  }
+
+  .points-item-1,
+  .points-item-2,
+  .points-item-3 {
+    width: 32%;
+  }
+
+  .points-item-1,
+  .points-item-2 {
+    margin-right: 2%;
+  }
+
+  .points-items-text-money-icon,
+  .points-items-text-date-icon {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .points-items-text-date-text,
+  .points-items-text-money-text {
+    line-height: 24px;
+  }
+
+  .sushi-logo {
+    margin-bottom: 30px;
+  }
+
+  .sushi-text div:last-child {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;
+  }
+
+  .sushi-text {
+    width: 50%;
+  }
+
+  .fear-content li div:first-child {
+    margin-right: 15px;
+  }
+
+  .persona-phone,
+  .persona-email,
+  .persona-phone-and-mail {
+    font-size: 18px;
+  }
+}
+
+@media (max-width:992px) {
+  article {
+    max-width: 750px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  button,
+  .button {
+    font-size: 14px;
+    border-radius: 5px;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 55px;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero-content-h,
+  .content-money-sum {
+    margin-bottom: 30px;
+  }
+
+  .content-money-text,
+  .content-text-1,
+  .content-text-2 {
+    margin-bottom: 15px;
+  }
+
+  .content-text {
+    width: 500px;
+  }
+
+  .content-text-numbers {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  .content-text-number-1 {
+    margin-right: 10px;
+  }
+
+  .content-text-number-1 div:first-child,
+  .content-text-number-2 div:first-child {
+    min-width: 24px;
+    height: 24px;
+    line-height: 24px;
+    margin-right: 10px;
+  }
+
+  .content-text-number-1 div:last-child,
+  .content-text-number-2 div:last-child {
+    line-height: 20px;
+    margin-top: 3px;
+  }
+
+  .content-money-sum {
+    font-size: 20px;
+  }
+
+  .features-content {
+    padding: 60px 0;
+  }
+
+  .features-h {
+    margin-bottom: 35px;
+  }
+
+
+  .features-items-1-icon,
+  .features-items-2-icon,
+  .features-items-3-icon {
+    margin-right: 20px;
+  }
+
+  .features-items-1-text div:first-child,
+  .features-items-2-text div:first-child,
+  .features-items-3-text div:first-child {
+    font-size: 24px;
+    margin: 5px 0 20px;
+  }
+
+  .points {
+    padding: 50px 0;
+  }
+
+  .points-content-h {
+    margin-bottom: 30px;
+  }
+
+  .points-content-h-arrows {
+    width: 188px;
+    margin-top: 10px;
+  }
+
+  .points-item-1,
+  .points-item-2 {
+    width: 47%;
+  }
+
+  .points-item-3 {
+    display: none;
+  }
+
+  .points-item-1{
+    margin-right: 6%;
+  }
+
+  .points-item-text-h {
+    margin: 20px 0 15px;
+  }
+
+  .points-items-text-date,
+  .points-items-text-money {
+    margin-bottom: 15px;
+    display: flex;
+  }
+
+  .points-items-text-money-icon,
+  .points-items-text-date-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .points-items-text-date-text,
+  .points-items-text-money-text {
+    line-height: 30px;
+  }
+
+
+  .sushi-content {
+    padding: 55px 0;
+  }
+
+  .sushi-logo {
+    margin-bottom: 30px;
+    width: 150px;
+  }
+
+  .sushi-text div:last-child {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 44px;
+  }
+
+  .sushi-text {
+    width: 70%;
+  }
+
+  .tasty-content {
+    padding: 50px 0;
+  }
+
+  .why-content-text h2,
+  .tasty-content-text h2 {
+    margin-bottom: 30px;
+  }
+
+  .tasty-content-text ul {
+    margin-bottom: 20px;
+  }
+
+  .why-content-text li,
+  .tasty-content-text li {
+    padding-left: 30px;
+    margin-bottom: 15px;
+    position: relative;
+    line-height: 22px;
+  }
+
+  .why-content-text li::before,
+  .tasty-content-text li::before {
+    content: '';
+    width: 15px;
+    height: 2px;
+    background-color: #FFCD28;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+
+  .why-content {
+    padding: 70px 0;
+  }
+
+  .why {
+    position: relative;
+  }
+
+  .tasty {
+    position: relative;
+  }
+
+  .why-bg {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-image: url(../img/why-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    right: 0;
+  }
+
+  .tasty-bg {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-image: url(../img/tasty-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    right: left;
+  }
+
+
+  .mobile-content {
+    padding-top: 50px;
+    background-image: url(../img/mobile-bg.svg);
+    background-repeat: no-repeat;
+    background-position: 16% bottom;
+    background-size: 60%;
+  }
+
+  .mobile-ios {
+    margin-right: 15px;
+  }
+
+  .mobile-text h2 {
+    margin-bottom: 60px;
+  }
+
+  .mobile-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .mobile-content .img {
+    width: 320px;
+    height: 327px;
+  }
+
+  .calc-content {
+    padding: 50px 0;
+  }
+
+  .calc-form {
+    margin: 30px 0;
+    padding-bottom: 30px;
+  }
+
+  .calc-results h3 {
+    margin-bottom: 15px;
+  }
+
+  .calc-range .calc-range-label {
+    margin-bottom: 30px;
+  }
+
+  .calc-range li {
+    font-size: 10px;
+  }
+
+
+}
+
+@media (max-width:767px) {
+  article {
+    max-width: none;
+  }
 }
