@@ -56,6 +56,7 @@ h3 {
   font-weight: bold;
 }
 
+
 header {
   background: #FFFFFF;
   box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.1);
@@ -125,7 +126,6 @@ header {
 .why,
 .presents {
   background-color: #F3F3F3;
-  width: 100%;
 }
 
 .points {
@@ -232,6 +232,7 @@ h2 span {
 
 .sushi-logo {
   margin-bottom: 40px;
+  width: 40%;
 }
 
 .sushi-text div:last-child {
@@ -413,6 +414,12 @@ h2 span {
   display: none;
 }
 
+.calc-money-cont {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .calc-range input[type=range] {
   background-color: white;
   height: 2px;
@@ -454,7 +461,8 @@ input[type=range]::-ms-thumb {
   cursor: pointer;
 }
 
-input:focus {
+input:focus,
+button:focus {
   outline: none;
 }
 
@@ -626,9 +634,9 @@ input[type=checkbox] {
   margin-bottom: 20px;
 }
 
-.form-content-forms input[type=text],
-.form-content-forms input[type=email],
-.form-content-forms input[type=phone] {
+input[type=text],
+input[type=email],
+input[type=phone] {
   background-color:  #303030;
   padding: 0 15px;
   border: 1px solid white;
@@ -638,10 +646,10 @@ input[type=checkbox] {
   box-sizing: border-box;
 }
 
-.form-content-forms input::-webkit-input-placeholder {font-size: 18px;}
-.form-content-forms input::-moz-placeholder          {font-size: 18px;}
-.form-content-forms input:-moz-placeholder           {font-size: 18px;}
-.form-content-forms input:-ms-input-placeholder      {font-size: 18px;}
+input::-webkit-input-placeholder {font-size: 18px;}
+input::-moz-placeholder          {font-size: 18px;}
+input:-moz-placeholder           {font-size: 18px;}
+input:-ms-input-placeholder      {font-size: 18px;}
 
 .form-check {
   position: relative;
@@ -781,6 +789,91 @@ input[type=checkbox] {
   margin-bottom: 45px;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 1;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  display: none;
+  overflow: auto;
+
+}
+
+.modal:target {
+  display: block;
+  pointer-events: auto;
+}
+
+
+.modal-dialog {
+  padding: 30px;
+  width: 400px;
+  background-color: #303030;
+  color: white;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 10% auto;
+
+}
+
+.modal-dialog h3,
+.modal-dialog input {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.close {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal-dialog .close-button {
+  position: relative;
+  margin-top: 20px;
+  background-color: #303030;
+  width: 24px;
+  height: 24px;
+}
+
+.modal-dialog .close-button::after {
+  right: 0;
+  top: 0;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 3px;
+  transform: rotate(315deg);
+  background-color: white;
+}
+
+.modal-dialog .close-button::before {
+  right: 0;
+  top: 0;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 3px;
+  transform: rotate(45deg);
+  background-color: white;
+}
+
+.modal-dialog input[type=submit] {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+
 @media (max-width:1290px) {
   article {
     max-width: 970px;
@@ -880,16 +973,17 @@ input[type=checkbox] {
 
   h1 {
     font-size: 40px;
-    line-height: 55px;
+    line-height: 46px;
   }
 
   h2 {
     font-size: 30px;
-    line-height: 45px;
+    line-height: 36px;
   }
 
   h3 {
     font-size: 20px;
+    line-height: 30px;
   }
 
 
@@ -957,7 +1051,7 @@ input[type=checkbox] {
   .features-items-1-text div:first-child,
   .features-items-2-text div:first-child,
   .features-items-3-text div:first-child {
-    font-size: 24px;
+    font-size: 22px;
     margin: 5px 0 20px;
   }
 
@@ -1021,7 +1115,7 @@ input[type=checkbox] {
   .sushi-text div:last-child {
     font-size: 20px;
     font-weight: bold;
-    line-height: 44px;
+    line-height: 30px;
   }
 
   .sushi-text {
@@ -1132,7 +1226,7 @@ input[type=checkbox] {
   }
 
   .calc-results h3 {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
 
   .calc-range .calc-range-label {
@@ -1143,11 +1237,787 @@ input[type=checkbox] {
     font-size: 10px;
   }
 
+  .fear-content {
+    padding: 50px 0;
+  }
+
+  .fear-content h2 {
+    margin-bottom: 25px;
+  }
+
+  .fear-content p {
+    line-height: 20px;
+  }
+
+  .fear-content li {
+    width: 47%;
+    margin-top: 25px;
+  }
+
+  .fear-content li:nth-child(2),
+  .fear-content li:nth-child(4) {
+    margin-right: none;
+  }
+
+  .fear-content li:nth-child(1),
+  .fear-content li:nth-child(3) {
+    margin-right: 3%;
+  }
+
+  .fear-content li div:first-child {
+    font-size: 90px;
+    line-height: 90px;
+    margin-right: 20px;
+  }
+
+  .fear-content li div:last-child {
+    line-height: 24px;
+  }
+
+  .price {
+    padding: 40px 0;
+  }
+
+  .price-list {
+    padding: 30px;
+  }
+
+  .price-list h2 {
+    margin-bottom: 25px;
+  }
+
+  .price-point {
+    margin-bottom: 25px;
+  }
+
+  .price-point-info {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .us {
+    padding: 50px 0;
+    background-position: 65% bottom;
+    background-size: 70%;
+  }
+
+  .us-content-text h2:first-child {
+    margin-bottom: 30px;
+  }
+
+  .us-content-text li {
+    margin-bottom: 15px;
+  }
+
+  .us-content-text ul {
+    margin-bottom: 40px;
+  }
+
+  .us-content-text h3 {
+    line-height: 36px;
+    margin-bottom: 40px;
+  }
+
+  .form-content {
+    padding: 50px 0;
+  }
+
+  .form-content h2 {
+    margin-bottom: 35px;
+  }
+
+  .form-name,
+  .form-mail,
+  .form-phone,
+  .form-city,
+  .form-check,
+  .form-sub {
+    width: 48%;
+  }
+
+  .form-sub {
+    margin-top: 25px;
+  }
+
+  .form-name div,
+  .form-mail div,
+  .form-phone div,
+  .form-city div,
+  .form-check div,
+  .form-sub div {
+    margin-bottom: 20px;
+  }
+
+  .form-content-forms input[type=text],
+  .form-content-forms input[type=email],
+  .form-content-forms input[type=phone] {
+    padding: 0 10px;
+    height: 48px;
+  }
+
+  .form-content-forms input::-webkit-input-placeholder {font-size: 14px;}
+  .form-content-forms input::-moz-placeholder          {font-size: 14px;}
+  .form-content-forms input:-moz-placeholder           {font-size: 14px;}
+  .form-content-forms input:-ms-input-placeholder      {font-size: 14px;}
+
+  .form-check {
+    position: relative;
+    margin-top: 30px;
+  }
+
+  .check-label {
+    padding-left: 30px;
+    position: relative;
+    display: block;
+    padding-top: 3px;
+  }
+
+  .persona-content {
+    padding: 50px 0;
+  }
+
+  .persona-content h2 {
+    margin-bottom: 20px;
+  }
+
+  .persona-discription {
+    margin-bottom: 25px;
+  }
+
+  .persona-photo {
+    margin-right: 30px;
+  }
+
+  .persona-photo img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .persona-info h3 {
+    margin: 5px 0 15px;
+  }
+
+  .persona-phone,
+  .persona-email,
+  .persona-phone-and-mail {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+  }
+
+  .persona-phone-and-mail {
+    margin: 30px 0;
+  }
+
+  .persona-phone-icon,
+  .persona-email-icon {
+    margin-right: 10px;
+  }
+
+  .persona-phone {
+    margin-right: 30px;
+  }
+
+  .presents-content {
+    padding: 50px 0;
+  }
+
+  .presents-content h2 {
+    margin-bottom: 40px;
+  }
+
+  .presents-royalty,
+  .presents-free,
+  .presents-discount {
+    width: 31.5%;
+    padding: 30px;
+    background-color: white;
+    box-sizing: border-box;
+  }
+
+  .presents-content h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .presents-content p {
+    margin-bottom: 30px;
+  }
 
 }
 
 @media (max-width:767px) {
   article {
     max-width: none;
+    padding-left: 15px;
+    padding-left: 15px;
   }
+
+  header {
+    background: #FFFFFF;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header img {
+    height: 36px;
+  }
+
+  .hero-content {
+    padding: 0;
+  }
+
+  .hero {
+    padding: 30px 15px;
+  }
+
+  .hero-content-h,
+  .content-money-sum {
+    margin-bottom: 20px;
+  }
+
+  .content-money-text,
+  .content-text-1,
+  .content-text-2 {
+    margin-bottom: 15px;
+  }
+
+  .content-text {
+    width: 100%;
+  }
+
+  .content-text-numbers {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .content-text-number-1 {
+    margin-bottom: 15px;
+  }
+
+  .hero span {
+    display: none;
+  }
+
+  .features-content {
+    padding: 30px 15px;
+  }
+
+  .features-items {
+    display: block;
+  }
+
+  .features-items-1,
+  .features-items-2,
+  .features-items-3 {
+    display: flex;
+    width: 100%
+  }
+
+  .features-items-1,
+  .features-items-2 {
+    margin-bottom: 15px;
+  }
+
+  .features-h {
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .points-content-h {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .points-content-h-arrows {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .points-items {
+    display: flex;
+  }
+
+  .points-item-1 {
+    width: 100%;
+  }
+
+  .points-item-2 {
+    display: none;
+  }
+
+  .points-item-1{
+    margin-right: 0;
+  }
+
+  .points {
+    padding: 30px 15px;
+  }
+
+  .sushi-content {
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sushi-logo {
+    margin-bottom: 20px;
+    width: 40%;
+  }
+
+  .sushi-text div:last-child {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+  }
+
+  .sushi-text div:last-child span {
+    color: #FFCD28;
+  }
+
+  .sushi-text {
+    width: 100%;
+  }
+
+  .tasty {
+    background-image: none;
+  }
+
+  .tasty-content {
+    padding: 30px 15px;
+    display: block;
+  }
+
+  .why-content-text,
+  .tasty-content-text {
+    width: 100%;
+  }
+
+  .why-content-text h2,
+  .tasty-content-text h2 {
+    margin-bottom: 20px;
+  }
+
+  .tasty-content-text ul {
+    margin-bottom: 15px;
+  }
+
+  .why-content-text li,
+  .tasty-content-text li {
+    padding-left: 40px;
+    margin-bottom: 15px;
+    position: relative;
+    line-height: 24px;
+  }
+
+  .why-content-text li::before,
+  .tasty-content-text li::before {
+    content: '';
+    width: 25px;
+    height: 3px;
+    background-color: #FFCD28;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+
+  .why-content {
+    padding: 30px 15px;
+  }
+
+  .why {
+    position: relative;
+  }
+
+  .tasty {
+    position: relative;
+  }
+
+  .why-bg {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-image: none;
+  }
+
+  .tasty-bg {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-image: none;
+  }
+
+
+  .mobile-text {
+    width: 100%;
+    margin-bottom: 20px
+  }
+
+  .mobile-text-buttons {
+    display: flex;
+  }
+
+  .mobile-content {
+    padding: 30px 15px 0;
+    background-image: url(../img/mobile-bg.svg);
+    background-repeat: no-repeat;
+    background-position: 60% bottom;
+    flex-direction: column-reverse;
+    background-size: 70%;
+  }
+
+  .mobile-ios {
+    margin-right: 15px;
+  }
+
+  .mobile-text h2 {
+    margin-bottom: 30px;
+  }
+
+  .mobile-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .mobile-content .img {
+    width: 320px;
+    height: 327px;
+  }
+
+  .calc-content {
+    padding: 30px 15px;
+  }
+
+  .calc-form {
+    margin: 20px 0;
+    padding-bottom: 20px;
+  }
+
+  .calc-results h3 {
+    margin-bottom: 5px;
+  }
+
+  .calc-range .calc-range-label {
+    margin-bottom: 30px;
+  }
+
+  .calc-range li {
+    font-size: 10px;
+  }
+
+  .calc-form {
+    display: flex;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    flex-direction: column;
+  }
+
+  .calc-results {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .calc-results h3 {
+    margin-bottom: 5px;
+  }
+
+  .calc-month,
+  .calc-money {
+    width: 100%;
+    text-align: center;
+  }
+
+  .calc-range {
+    width: 100%;
+  }
+
+  .calc-range .calc-range-label {
+    margin-bottom: 30px;
+  }
+
+  .calc-range datalist option {
+    display: none;
+  }
+
+  .form-check {
+    margin-top: 45px;
+  }
+
+  .form-sub .button {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .calc-range ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .calc-range li {
+    font-size: 12px;
+  }
+  .fear-content {
+    padding: 30px 15px;
+  }
+
+  .fear-content h2 {
+    margin-bottom: 15px;
+  }
+
+  .fear-content p {
+    line-height: 20px;
+  }
+
+  .fear-content li {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .fear-content li:nth-child(2),
+  .fear-content li:nth-child(4) {
+    margin-right: none;
+  }
+
+  .fear-content li:nth-child(1),
+  .fear-content li:nth-child(3) {
+    margin-right: none;
+  }
+
+  .fear-content li div:first-child {
+  font-size: 90px;
+    line-height: 90px;
+    margin-right: 20px;
+  }
+
+  .fear-content li div:last-child {
+    line-height: 24px;
+  }
+
+  .price {
+    padding: 30px 15px;
+  }
+
+  .price-content {
+    padding-left: 0;
+  }
+
+  .price-list {
+    padding: 30px;
+  }
+
+  .price-list h2 {
+    margin-bottom: 25px;
+  }
+
+  .price-point {
+    margin-bottom: 25px;
+  }
+
+  .price-point-info {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+
+    .us {
+      padding: 30px 15px;
+      background-position: 50% bottom;
+      background-size: 100%;
+      background-image: none;
+    }
+
+    .us-content-text h2:first-child {
+      margin-bottom: 15px;
+    }
+
+    .us-content-text li {
+      margin-bottom: 15px;
+    }
+
+    .us-content-text ul {
+      margin-bottom: 20px;
+    }
+
+    .us-content-text h3 {
+      line-height: 36px;
+      margin-bottom: 25px;
+      width: 100%;
+    }
+
+    .form-content {
+      padding: 30px 15px;
+    }
+
+    .form-content h2 {
+      margin-bottom: 35px;
+    }
+
+    .form-name,
+    .form-mail,
+    .form-phone,
+    .form-city,
+    .form-check,
+    .form-sub {
+      width: 100%;
+    }
+
+    .form-sub {
+      margin-top: 25px;
+    }
+
+    .form-name div,
+    .form-mail div,
+    .form-phone div,
+    .form-city div,
+    .form-check div,
+    .form-sub div {
+      margin-bottom: 20px;
+    }
+
+    .form-content-forms input[type=text],
+    .form-content-forms input[type=email],
+    .form-content-forms input[type=phone] {
+      padding: 0 10px;
+      height: 48px;
+    }
+
+    .form-content-forms input::-webkit-input-placeholder {font-size: 14px;}
+    .form-content-forms input::-moz-placeholder          {font-size: 14px;}
+    .form-content-forms input:-moz-placeholder           {font-size: 14px;}
+    .form-content-forms input:-ms-input-placeholder      {font-size: 14px;}
+
+    .form-check {
+      position: relative;
+      margin-top: 30px;
+    }
+
+    .check-label {
+      padding-left: 30px;
+      position: relative;
+      display: block;
+      padding-top: 3px;
+    }
+
+    .persona-content {
+      padding: 30px 15px;
+    }
+
+    .persona-content h2 {
+      margin-bottom: 20px;
+    }
+
+    .persona-photo-and-info {
+      flex-direction: column;
+    }
+
+
+    .persona-discription {
+      margin-bottom: 25px;
+    }
+
+    .persona-photo {
+      margin-right: 30px;
+    }
+
+    .persona-photo img {
+      width: 200px;
+      height: 200px;
+    }
+
+    .persona-info h3 {
+      margin: 5px 0 15px;
+    }
+
+    .persona-phone,
+    .persona-email,
+    .persona-phone-and-mail {
+      display: flex;
+      font-size: 18px;
+      align-items: center;
+    }
+
+    .persona-phone-and-mail {
+      margin: 20px 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .persona-phone-icon,
+    .persona-email-icon {
+      margin-right: 10px;
+    }
+
+    .persona-phone {
+      margin-bottom: 15px;
+    }
+
+    .presents-content {
+      padding: 30px 15px;
+    }
+
+    .presents-cards {
+      flex-direction: column;
+    }
+
+    .presents-cards button {
+      width: 100%;
+    }
+
+    .presents-content h2 {
+      margin-bottom: 20px;
+    }
+
+    .presents-royalty,
+    .presents-free,
+    .presents-discount {
+      width: 100%;
+      padding: 30px;
+      background-color: white;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+    }
+
+    .presents-content h3 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .presents-content p {
+      margin-bottom: 15px;
+    }
+
+    .points-content {
+      padding: 0;
+    }
+
+    .mobile-content .img {
+      width: 280px;
+      height: 286px;
+    }
+
+    .whatsapp {
+      margin-right: 15px;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    .us-content-button {
+      margin-top: 25px;
+    }
 }

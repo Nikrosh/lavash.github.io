@@ -12,7 +12,7 @@
 <body>
   <header>
     <div class="logo">
-      <img src="img/logo.svg" alt="Логотип">
+      <img src="img/logo.svg" alt="Логотип" width="100%" height="100%">
     </div>
   </header>
 
@@ -43,7 +43,7 @@
               от 200 000 до 500 000 ₽ ежемесячно
             </div>
           </div>
-          <button type="button" name="hero">Запросить фин. данные по существующим точкам</button>
+          <button type="button" name="hero" class="opnOne">Запросить фин. данные <span>по существующим точкам</span></button>
         </div>
       </article>
     </section>
@@ -51,7 +51,7 @@
     <section class="features">
       <article class="features-content">
         <div class="features-h">
-          <h2>Франшиза шаурмы <span>#Лаваш</span> сегодня это:</h2>
+          <h2>Франшиза шаурмы #Лаваш сегодня это:</h2>
         </div>
         <div class="features-items">
           <div class="features-items-1">
@@ -113,7 +113,7 @@
       <div class="points-items">
         <div class="points-item-1">
           <div class="points-item-img">
-            <img src="img/point-1.png" alt="Казанская точка" width="100%">
+            <img src="img/point-1.png" alt="Казанская точка"  width="100%" height="100%">
           </div>
           <div class="points-items-text">
             <div class="points-item-text-h"><h3>Казань</h3></div>
@@ -133,7 +133,7 @@
         </div>
         <div class="points-item-2">
           <div class="points-item-img">
-            <img src="img/point-2.png" alt="Московская точка" width="100%">
+            <img src="img/point-2.png" alt="Московская точка"  width="100%" height="100%">
           </div>
           <div class="points-items-text">
             <div class="points-item-text-h"><h3>Москва</h3></div>
@@ -153,7 +153,7 @@
         </div>
         <div class="points-item-3">
           <div class="points-item-img">
-            <img src="img/point-3.png" alt="Самарская точка" width="100%">
+            <img src="img/point-3.png" alt="Самарская точка"  width="100%" height="100%">
           </div>
           <div class="points-items-text">
             <div class="points-item-text-h"><h3>Самара</h3></div>
@@ -195,7 +195,7 @@
     <div class="tasty-bg"></div>
     <article class="tasty-content">
       <div class="tasty-content-text">
-        <h2>Почему у нас получается вкусная <span>шаурма</span>?</h2>
+        <h2>Почему у нас получается вкусная шаурма?</h2>
         <ul>
           <li>Знаем, как выбирать продукты и поставщика</li>
           <li>Используем проверенную запатентованную технологию приготовления</li>
@@ -203,7 +203,7 @@
           <li>Строго соблюдаем все санитарные нормы</li>
           <li>Следим за качеством продукции (заставляем управляющих кушать шаурму)</li>
         </ul>
-        <button type="button" name="button">Скачать презентацию</button>
+        <button type="button" name="button" class="opn">Скачать презентацию</button>
       </div>
     </article>
   </section>
@@ -212,7 +212,7 @@
     <div class="why-bg"></div>
     <article class="why-content">
       <div class="why-content-text">
-        <h2>Почему с нами <span>выгодно</span>?</h2>
+        <h2>Почему с нами выгодно?</h2>
         <ul>
           <li>Мы умеем продавать шаурму и правильно взаимодействовать с покупателем</li>
           <li>Есть программа обучения как управленцев так и линейного персонала</li>
@@ -231,7 +231,7 @@
         <img src="img/mobile.png" alt="Приложение" width="100%" height="100%">
       </div>
       <div class="mobile-text">
-        <h2>Мы запустили<br> <span>мобильное приложение</span></h2>
+        <h2>Мы запустили<br> мобильное приложение</h2>
         <p>Доступно для iOS и Android:</p>
         <div class="mobile-text-buttons">
           <div class="mobile-ios">
@@ -247,12 +247,12 @@
 
   <section class="calc">
     <article class="calc-content">
-      <h2>Сколько вы планируете зарабатывать с франшизой <span>#Лаваш?</span></h2>
+      <h2>Сколько вы планируете зарабатывать с франшизой #Лаваш?</h2>
       <form action="">
         <div class="calc-form">
           <div class="calc-range">
             <div class="calc-range-label"><label for="shaverms">Планируемое количество шавермы в день</label></div>
-            <div><input type="range" max="1000" min="100" step="100" id="shaverms" list="tickmarks"></div>
+            <div><input type="range" max="1000" min="100" step="100" list="tickmarks" class="calc-range" id="range" oninput="fun1()"></div>
             <ul>
               <li class="calc-range-col">100</li>
               <li class="calc-range-col">200</li>
@@ -280,17 +280,17 @@
           </div>
           <div class="calc-results">
             <div class="calc-month">
-              <h3>11,7</h3>
+              <h3 id="calcMonth">5,1</h3>
               <p>Окупаемость через (мес)</p>
             </div>
             <div class="calc-money">
-              <h3>171 000 ₽</h3>
+              <div class="calc-money-cont" ><h3 id="calcMoney">396000</h3><h3> ₽</h3></div>
               <p>Ваша чистая прибыль в месяц</p>
             </div>
           </div>
         </div>
       </form>
-      <button type="button" name="button">Запросить финансовый план</button>
+      <button type="button" name="button" class="opnTwo">Запросить финансовый план</button>
     </article>
   </section>
 
@@ -339,7 +339,7 @@
           <p class="price-point-info">5% с оборота</p>
           <p class="price-point-label">Роялти</p>
         </div>
-        <button type="button" name="button">Запросить финансовый план</button>
+        <button type="button" name="button" class="opnTree">Запросить финансовый план</button>
       </div>
     </article>
   </section>
@@ -357,19 +357,19 @@
         <h2>Присоединяйтесь!</h2>
       </div>
       <div class="us-content-button">
-        <button type="button" name="button">Скачать презентацию</button>
+        <button type="button" name="button" class="opn">Скачать презентацию</button>
       </div>
     </article>
   </section>
 
   <section class="form">
     <article class="form-content">
-      <h2>Заполните заявку и мы пришлем вам финансовый план по открытию <span>вашей точки шаурмы</span></h2>
+      <h2>Заполните заявку и мы пришлем вам финансовый план по открытию вашей точки шаурмы</h2>
       <form action="" method="post">
         <div class="form-content-forms">
           <div class="form-name">
             <div><label for="name">Имя</label></div>
-            <div><input type="text" id="name" placeholder="Фамилия, Имя" autocomplete="on" required></div>
+            <div><input type="text" id="name" placeholder="Фамилия, Имя" autocomplete="on" required class="rt"></div>
           </div>
           <div class="form-mail">
             <div><label for="email">Email</label></div>
@@ -396,7 +396,7 @@
 
   <section class="persona">
     <article class="persona-content">
-      <h2>Мы всегда открыты для <span>сотрудничества</span></h2>
+      <h2>Мы всегда открыты для сотрудничества</h2>
       <div class="persona-discription"><p>Станьте частью федеральной сети #ЛАВАШ — зарабатывайте вместе с нами!</p></div>
       <div class="persona-photo-and-info">
         <div class="persona-photo">
@@ -434,26 +434,46 @@
 
   <section class="presents">
     <article class="presents-content">
-      <h2>Для тех, кто действительно дочитал до конца и заинтересован в нашем приложении, мы готовы предложить <span>специальные условия</span></h2>
+      <h2>Для тех, кто действительно дочитал до конца и заинтересован в нашем приложении, мы готовы предложить специальные условия</h2>
       <div class="presents-cards">
         <div class="presents-royalty">
           <h3>3.5%</h3>
           <p>Роялти в первый год работы</p>
-          <button type="button" name="button">Выбрать бонус</button>
+          <button type="button" name="button" class="opnFour">Выбрать бонус</button>
         </div>
         <div class="presents-free">
           <h3>Бесплатно</h3>
           <p>Команда открытия на 1 месяц</p>
-          <button type="button" name="button">Выбрать бонус</button>
+          <button type="button" name="button" class="opnFive">Выбрать бонус</button>
         </div>
         <div class="presents-discount">
           <h3>30%</h3>
           <p>Скидка на паушальный взнос</p>
-          <button type="button" name="button">Выбрать бонус</button>
+          <button type="button" name="button" class="opnSix">Выбрать бонус</button>
         </div>
       </div>
     </article>
   </section>
+
+  <div class="modal">
+    <div class="modal-dialog">
+      <div class="close">
+        <h3>Скачать финансовый план</h3>
+        <button class="close-button"></button>
+      </div>
+      <form action="">
+        <input type="text" placeholder="Имя" required>
+        <input type="email" placeholder="Электронная почта" required>
+        <input type="phone" placeholder="Телефон" required>
+        <input type="text" placeholder="Город" required>
+        <input type="checkbox" name="check-modal" class="form-checkbox" id="check-modal" required><label for="check-modal" class="check-label">Согласен на обработку персональных данных</label>
+        <input type="submit" name="" value="Отправить заявку" class="button">
+      </form>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/calc.js"></script>
+  <script type="text/javascript" src="js/modal.js"></script>
 
 </body>
 </html>
